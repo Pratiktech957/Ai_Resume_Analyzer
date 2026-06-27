@@ -1,0 +1,26 @@
+/* index.css or App.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply transition-colors duration-300;
+  }
+}
+
+/* Dark mode background for the whole app */
+.dark {
+  background-color: #0f172a;
+}
+
+.dark .bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, #0f172a, #1e293b, #0f172a) !important;
+}
+
+/* Optional: Smooth transition for all elements */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
